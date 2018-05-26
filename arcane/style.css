@@ -1,0 +1,222 @@
+body{
+	background-image: url("bckques.jpg");
+	background-repeat: no-repeat;
+	background-size:  cover;
+	color:white;
+}
+#player{
+	font-size:30px;
+	position: absolute;
+	right:15px;
+	top:0px;
+}
+
+.title h1{
+	font-family: 'VT323', monospace;
+	font-size: 50px;
+	color: #eaf215;
+	position:relative;
+	top: 10%;
+	text-align: center;
+
+}
+/*.title figcaption{
+	ont-family: cursive,sans-serif,serif;
+	font-size: 34px;
+	color: #eaf215;
+	display: inline-block;
+	text-align: center;
+	margin-left: 60px;
+	font-weight: bolder;
+	font-style: italic;
+}*/
+img{
+	
+	width: 30%;
+	height: auto;
+	border-radius: 5px;
+}
+/*
+.rules{
+	margin-left: 3%;
+}
+.rules h1{
+	
+	font-family: Georgia,cursive,serif;
+	font-size: 45px;
+	color: #73f70e;
+	font-weight: bolder;
+}
+.rules ul li{
+	font-family:"Times New Roman",arial,sans-serif;
+	font-size: 28px;
+	line-height: 2.05em;
+	color: white;
+	font-weight: bolder;
+	text-align: left;
+	font-style: italic;
+}
+*/
+/*.button {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #eaf215;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 200px;
+  font-family: cursive,serif;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 460px;
+	margin-top: 80px;
+}*/
+/*.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+*/
+
+/*ques css*/
+.level{
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.75);
+	width: 80%;
+	float: left;
+	margin: 30px 6% 0px;
+	padding: 4%;
+	border-radius: 5%;
+}
+input{
+	font-size: 24px;
+	font-family: 'VT323', monospace;
+}
+input[type=text]{
+	display: inline;
+	padding: 10px;
+	margin-top: 2%;
+	/*margin-right: 10px;
+	margin-bottom: 20px;*/
+
+}
+
+input[type=submit],input[type=reset],input[type=button]{
+	padding: 10px;
+	border-radius: 5%;
+	margin-top: 3%;
+	margin-right: 1%;
+
+}
+
+.level p{
+	font-size: 32px;
+	/*padding: 40px;*/
+	font-family: cursive,verdana,sans-serif;
+	color: #40f6f9;
+	font-weight: bolder;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700);
+
+.button {
+  position:relative;
+  margin-top:10%;
+  
+  border:1px solid black;
+  padding:20px;
+  font-size:0.9em;
+  color:black;
+  box-shadow:4px 4px 0px 0px white;
+  font-family: 'VT323', monospace;
+  font-weight:700;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  
+}
+
+.button:hover {
+  left:4px;
+  top:4px;
+  background:black;
+  border:1px solid white;
+  color:white;
+  box-shadow:none;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
+
+.button-leader {
+  position:relative;
+  margin-top:10%;
+  
+  border:1px solid black;
+  padding:20px;
+  font-size:0.9em;
+  color:black;
+  box-shadow:4px 4px 0px 0px white;
+  font-family: 'VT323', monospace;
+  font-weight:700;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  
+}
+
+.button-leader:hover {
+  left:4px;
+  top:4px;
+  background:black;
+  border:1px solid white;
+  color:white;
+  box-shadow:none;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
+.button-reset {
+  position:relative;
+  margin-top:10%;
+  
+  border:1px solid black;
+  padding:20px;
+  font-size:0.9em;
+  color:black;
+  box-shadow:4px 4px 0px 0px white;
+  font-family: 'VT323', monospace;
+  font-weight:700;
+  letter-spacing:5px;
+  text-transform:uppercase;
+  
+}
+
+.button-reset:hover {
+  left:4px;
+  top:4px;
+  background:black;
+  border:1px solid white;
+  color:white;
+  box-shadow:none;
+  transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+}
