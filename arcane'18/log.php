@@ -91,10 +91,10 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 					$myusername = mysqli_real_escape_string($db,$_POST['email']); // Escapes special characters in a string for use in an SQL statement
 					$mypassword = mysqli_real_escape_string($db,$_POST['password']); 
  
-					$query = "SELECT * FROM signup WHERE mail = '$myusername' and password = '$mypassword'"; //Fetching all the records with input credentials
+					$query = "SELECT * FROM arcane WHERE mail = '$myusername' and password = '$mypassword'"; //Fetching all the records with input credentials
 					$result = mysqli_query($db,$query);
 					$count = mysqli_num_rows($result);
-					$q = "SELECT score FROM signup WHERE mail = '$myusername' and password = '$mypassword'"; //Fetching all the records with input credentials
+					$q = "SELECT score FROM arcane WHERE mail = '$myusername' and password = '$mypassword'"; //Fetching all the records with input credentials
 					$n = mysqli_query($db,$q);
 					$r = mysqli_fetch_array($n);
 					if($count == 1)
@@ -102,45 +102,25 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 						$_SESSION['email']=$myusername; //Storing the username value in session variable so that it can be retrieved on other pages 
  
 						if($r['score']==1)
-						header("location: register.php");
+						header("location: vidi.php");
 						else if($r['score']==2)
-						header("location: ques2.php");
+						header("location: norton.php");
 						else if($r['score']==3)
-						header("location: ques3.php");
+						header("location: amya.php");
 						else if($r['score']==4)
-						header("location: ques4.php");
+						header("location: shini.php");
 						else if($r['score']==5)
-						header("location: ques5.php");
+						header("location: shu.php");
 						else if($r['score']==6)
-						header("location: ques6.php");
+						header("location: adit.php");
 						else if($r['score']==7)
-						header("location: ques7.php");
+						header("location: destiny.php");
 						else if($r['score']==8)
-						header("location: ques8.php");
+						header("location: ish.php");
 						else if($r['score']==9)
-						header("location: ques9.php");
+						header("location: bisleri.php");
 						else if($r['score']==10)
-						header("location: ques10.php");
-						else if($r['score']==11)
-						header("location: ques11.php");
-						else if($r['score']==12)
-						header("location: ques12.php");
-						else if($r['score']==13)
-						header("location: ques13.php");
-						else if($r['score']==14)
-						header("location: ques14.php");
-						else if($r['score']==15)
-						header("location: ques15.php");
-						else if($r['score']==16)
-						header("location: ques16.php");
-						else if($r['score']==17)
-						header("location: ques17.php");
-						else if($r['score']==18)
-						header("location: ques18.php");
-						else if($r['score']==19)
-						header("location: ques19.php");
-						else if($r['score']==20)
-						header("location: ques20.php");
+						header("location: dhokha.php");					
 						else
 						header("location: end.php");
 					}
@@ -178,12 +158,12 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 						error_reporting('E_ALL ^ E_NOTICE');
 						if(isset($_POST['submit']))
 						{
-								$con=mysqli_connect('localhost','root','') ;
+								$con=mysqli_connect('localhost','innerhx8_root','anonymous001') ;
 								if ( !$con ) 
 								{
 									die("Connection failed : " . mysqli_error());
 								}
-								$dbcon=mysqli_select_db($con,'arcane');
+								$dbcon=mysqli_select_db($con,'innerhx8_snignup');
 								if ( !$dbcon )
 								{
 									die("Database Connection failed : " . mysqli_error());
@@ -194,7 +174,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 								$collge=$_POST['college'];
 								$contact=$_POST['contact'];
 								$year=$_POST['year'];
-								$q=mysqli_query($con,"select * from signup where name='".$name."' or mail='".$mail."' ") or die(mysqli_error());
+								$q=mysqli_query($con,"select * from arcane where name='".$name."' or mail='".$mail."' ") or die(mysqli_error());
 								$n=mysqli_fetch_row($q);
 								if($n>0)
 								{
@@ -206,12 +186,12 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 								}
 								else
 								{
-									$insert=mysqli_query($con,"insert into signup(name,password,mail,college,contact,year) values('".$name."','".$password."','".$mail."','".$collge."','".$contact."','".$year."')") or die(mysqli_error());
+									$insert=mysqli_query($con,"insert into arcane(name,password,mail,college,contact,year) values('".$name."','".$password."','".$mail."','".$collge."','".$contact."','".$year."')") or die(mysqli_error());
 									if($insert)
 									{
 										$er='Values are registered successfully';
 										echo "<script>alert('$er')</script>";
-										$qry = "UPDATE signup SET score='1' WHERE mail='$mail'";
+										$qry = "UPDATE arcane SET score='1' WHERE mail='$mail'";
 										$res = mysqli_query($db,$qry);
 									}
 									else

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta name ="author" content="">
 <title>Innerve'17</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 	document.onkeydown = function(){
   switch (event.keyCode){
@@ -51,24 +50,23 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 <body>
 	
 	<div class="title">
-		<h1> Level 3: </h1> 
+		<h1> Level 15: </h1> 
 	</div>
 	<div class="level">
 		<div class="ques">
-			<h1> "That tattoo on your arm"</h1>
-			<p> " -.-. / --- / -. / --. / .-. / .- / - / ..- / .-.. / .- / - / .. / --- / -. / ... "</p>
+			<img src="arcane pics/mickey.jpg">
 		</div>
 		
 		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans3" id="ans3" autocomplete="off"><br><br>
+			<input type="text" placeholder="Your answer" name="ans15" id="ans15" autocomplete="off" ><br><br>
 			<input type="submit" name="submit" class="button">
 			<input type="reset" name="reset" class="button-reset">
 			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
 		</form>
 		</div>
-		</div>
-		<?php
+	</div>
+	<?php
 			include("DBConnection.php");
 
 			session_start();
@@ -76,13 +74,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			?>
 			<p id="player">Player: <?php echo $username ?> </p>
 			<?php
-			if(isset($_POST['ans3']))
+			if(isset($_POST['ans15']))
 			{
-				$check=$_POST["ans3"];
-				if ($_POST["ans3"] == 'johnfkennedy'){
-				$qry = "UPDATE signup SET ans3='$check', score='4' WHERE mail='$username'";
+				$check=$_POST["ans15"];
+				if ($_POST["ans15"] == 'niue'){
+				$qry = "UPDATE arcane SET ans15='$check', score='16' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: ques4.php");
+				header("location: end.php");
 				}
 			
 			else
@@ -94,9 +92,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			}
 			}
 
+
 		?>
-		 
-	
+
 
 </body>
 

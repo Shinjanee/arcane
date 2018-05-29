@@ -5,6 +5,7 @@
 <title>Innerve'17</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nosifer" rel="stylesheet">
 	     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 	document.onkeydown = function(){
@@ -48,24 +49,20 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
 </head>
 <body>
-	
 	<div class="title">
-		<h1> Level 2: </h1>
+		<h1> Level 10: </h1>
 	</div>
 	<div class="level">
-		<div class="ques">
-			<img src="arcane pics/frog.jpg"/><br><br>
-			<audio controls>
-				<source src="arcane pics/music.mp3" type="audio/mpeg">
-            </audio>
+		<div class="ques" style="font-family: 'Nosifer', cursive;">
+			<span style="position:absolute; bottom:0px; right:0px; font-size:15px; color:blue;">alert('$er')"; $q = stripslashes('$check'); } } ?></span>	
 		</div>
 		
 		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans2"id="ans2" autocomplete="off"><br><br>
+			<input type="text" placeholder="Your answer" name="ans10" id="ans10" autocomplete="off" ><br><br>
 			<input type="submit" name="submit" class="button">
 			<input type="reset" name="reset" class="button-reset">
-			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
+			<input type="button" name="Leaderboard" value="Leaderboard"  onClick="window.location.href ='Score.php'" class="button-leader">
 		</form>
 		</div>
 	</div>
@@ -77,13 +74,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			?>
 			<p id="player">Player: <?php echo $username ?> </p>
 			<?php
-			if(isset($_POST['ans2']))
+			if(isset($_POST['ans10']))
 			{
-				$check=$_POST["ans2"];
-				if ($_POST["ans2"] == 'osmgaming'){
-				$qry = "UPDATE signup SET ans2='$check', score='3' WHERE mail='$username'";
+				$check=$_POST["ans10"];
+				if ($_POST["ans10"] == 'nosifer'){
+				$qry = "UPDATE arcane SET ans10='$check', score='11' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: ques3.php");
+				header("location:end.php");
 				}
 			
 			else
@@ -95,7 +92,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			}
 			}
 
+
 		?>
+
 
 </body>
 

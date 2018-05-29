@@ -50,23 +50,25 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 <body>
 	
 	<div class="title">
-		 <h1> Level 12: </h1>
+		<h1> Level 8: </h1>
 	</div>
 	<div class="level">
 		<div class="ques">
-			<p> "The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge"</p>
+			<img src="arcane pics/pinned.jpg">
 		</div>
 		
 		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans12" id="ans12" autocomplete="off" ><br><br>
+			<input type="text" placeholder="Your answer" name="ans8" id="ans8" autocomplete="off"><br><br>
 			<input type="submit" name="submit" class="button">
 			<input type="reset" name="reset" class="button-reset">
-			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='score.php'" class="button-leader">
+			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
+
 		</form>
 		</div>
 	</div>
-	<?php
+	
+<?php
 			include("DBConnection.php");
 
 			session_start();
@@ -74,13 +76,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			?>
 			<p id="player">Player: <?php echo $username ?> </p>
 			<?php
-			if(isset($_POST['ans12']))
+			if(isset($_POST['ans8']))
 			{
-				$check=$_POST["ans12"];
-				if ($_POST["ans12"] == 'georgeandthebluemoon'){
-				$qry = "UPDATE signup SET ans12='$check', score='13' WHERE mail='$username'";
+				$check=$_POST["ans8"];
+				if ($_POST["ans8"] == 'https://www.instagram.com/p/BYFzwvSnZBI/?taken-by=sijo__pali'){
+				$qry = "UPDATE arcane SET ans8='$check', score='9' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: ques13.php");
+				header("location: bisleri.php");
 				}
 			
 			else
@@ -90,11 +92,9 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 				$q = stripslashes('$check');
 
 			}
+
 			}
-
-
 		?>
-
 
 </body>
 

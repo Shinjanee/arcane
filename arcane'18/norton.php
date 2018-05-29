@@ -4,6 +4,7 @@
 <meta name ="author" content="">
 <title>Innerve'17</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 	document.onkeydown = function(){
@@ -49,19 +50,22 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 <body>
 	
 	<div class="title">
-		<!-- <h1> Level 20: </h1> -->
+		<h1> Level 2: </h1>
 	</div>
 	<div class="level">
 		<div class="ques">
-			<p> " Your Text Here "</p>
+			<img src="arcane pics/frog.jpg"/><br><br>
+			<audio controls>
+				<source src="arcane pics/music.mp3" type="audio/mpeg">
+            </audio>
 		</div>
 		
 		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans20" id="ans20" autocomplete="off" ><br><br>
-			<input type="submit" name="submit">
-			<input type="reset" name="reset">
-			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='score.php'">
+			<input type="text" placeholder="Your answer" name="ans2"id="ans2" autocomplete="off"><br><br>
+			<input type="submit" name="submit" class="button">
+			<input type="reset" name="reset" class="button-reset">
+			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
 		</form>
 		</div>
 	</div>
@@ -73,13 +77,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			?>
 			<p id="player">Player: <?php echo $username ?> </p>
 			<?php
-			if(isset($_POST['ans20']))
+			if(isset($_POST['ans2']))
 			{
-				$check=$_POST["ans20"];
-				if ($_POST["ans20"] == 'pinterest'){
-				$qry = "UPDATE signup SET ans20='$check', score='21' WHERE mail='$username'";
+				$check=$_POST["ans2"];
+				if ($_POST["ans2"] == 'osmgaming'){
+				$qry = "UPDATE arcane SET ans2='$check', score='3' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: end.php");
+				header("location: amya.php");
 				}
 			
 			else
@@ -91,9 +95,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			}
 			}
 
-
 		?>
-
 
 </body>
 

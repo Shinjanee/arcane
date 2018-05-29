@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name ="author" content="">
+	<meta name ="author" content="">
 <title>Innerve'17</title>
-	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="home.css">
+<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+	    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 	document.onkeydown = function(){
   switch (event.keyCode){
@@ -48,55 +48,28 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
 </head>
 <body>
+	<img src= "logo.png" style="width:200px; height: auto;"/>
+	<div class = "home">
+		<!--<div class = "tophead">
+			Innerve-IGDTUW presents
+		</div>-->
 	
-	<div class="title">
-		<h1> Level 4: </h1>
-	</div>
-	<div class="level">
-		<div class="ques">
-			<img src= "arcane pics/qrcode.jpg">
+		<div class = "container">
+			<div class = "heading">
+				Arcane 2k17
+			</div>
+			<div class = "subheading">
+				- online cryptic hunt
+			</div>
+			<br><br>
+			<p>Date: 4th-5th October 2017</p>
+			<p>Time: 9pm-3am</p>
+				<button class = "button">
+				<a href="rules.php">Rules/Register </a>
+			</button>
+	
 		</div>
 		
-		<div class="ans">
-		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans4" id="ans4" autocomplete="off"><br><br>
-			<input type="submit" name="submit" class="button">
-			<input type="reset" name="reset" class="button-reset">
-			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
-			</form>
-			</div>
 	</div>
-		<?php
-			include("DBConnection.php");
-
-			session_start();
-			$username = $_SESSION['email']; //retrieve the session variable
-			?>
-			<p id="player">Player: <?php echo $username ?> </p>
-			<?php
-			if(isset($_POST['ans4']))
-			{
-				$check=$_POST["ans4"];
-				if ($_POST["ans4"] == 'bees'){
-				$qry = "UPDATE signup SET ans4='$check', score='5' WHERE mail='$username'";
-				$res = mysqli_query($db,$qry);
-				header("location: ques5.php");
-				}
-			
-			else
-			{
-				$er= 'Try Again';
-				echo "<script>alert('$er')</script>";
-				$q = stripslashes('$check');
-
-			}
-			}
-
-		?>
-
-	
-	
-
 </body>
-
 </html>

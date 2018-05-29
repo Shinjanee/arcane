@@ -50,22 +50,26 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 <body>
 	
 	<div class="title">
-		<h1> Level 6: </h1>
+		<h1> Level 11: </h1>
 	</div>
 	<div class="level">
 		<div class="ques">
-			<img src="arcane pics/yellow.jpg">
+			<img src="arcane pics/nazi.jpg">
+			<p> The most difficult part of the conundrum was discovered.</p>
 		</div>
 		
 		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans6" id="ans6" autocomplete="off"><br><br>
+			<input type="text" placeholder="Your answer" name="ans11" id="ans11" autocomplete="off" ><br><br>
 			<input type="submit" name="submit" class="button">
 			<input type="reset" name="reset" class="button-reset">
 			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
 		</form>
 		</div>
 	</div>
+	
+	<h4> fiwwm\m9w </h4> <!-- should appear at the bottom of the page as the footer -->
+	
 	<?php
 			include("DBConnection.php");
 
@@ -74,13 +78,13 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 			?>
 			<p id="player">Player: <?php echo $username ?> </p>
 			<?php
-			if(isset($_POST['ans6']))
+			if(isset($_POST['ans11']))
 			{
-				$check=$_POST["ans6"];
-				if ($_POST["ans6"] == 'courageous'){
-				$qry = "UPDATE signup SET ans6='$check', score='7' WHERE mail='$username'";
+				$check=$_POST["ans11"];
+				if ($_POST["ans11"] == 'bletchleypark'){
+				$qry = "UPDATE arcane SET ans11='$check', score='12' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: ques7.php");
+				header("location: an.php");
 				}
 			
 			else
@@ -91,6 +95,7 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 
 			}
 			}
+
 
 		?>
 

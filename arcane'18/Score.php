@@ -171,12 +171,12 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 					<td class="th">LEVEL</td>
 			</thead>
         <?php
-            $connect = mysqli_connect("localhost","root", "");
+            $connect = mysqli_connect("localhost","innerhx8_root", "anonymous001");
             if (!$connect) {
                 die(mysqli_error());
             }
-            mysqli_select_db($connect,"arcane");
-            $results = mysqli_query($connect,"SELECT name, score FROM signup ORDER BY score DESC LIMIT 10");
+            mysqli_select_db($connect,"innerhx8_snignup");
+            $results = mysqli_query($connect,"SELECT name, score FROM arcane ORDER BY score DESC LIMIT 10");
             while($row = mysqli_fetch_array($results)) {
 				$name = $row['name'];
 				$score = $row['score']; 

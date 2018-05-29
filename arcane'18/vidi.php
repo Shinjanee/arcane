@@ -5,7 +5,7 @@
 <title>Innerve'17</title>
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-	     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	 <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 	document.onkeydown = function(){
   switch (event.keyCode){
@@ -48,39 +48,39 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 </script>
 </head>
 <body>
-	
+
 	<div class="title">
-		<h1> Level 5: </h1>
+		<h1> Level 1: </h1> 
 	</div>
 	<div class="level">
 		<div class="ques">
-			<p> " ❑︎◆︎♋︎❒︎⧫︎♏︎❒︎ ◻︎♋︎⬧︎⧫︎ "</p>
+			<p> " Carefully observe everywhere and then write answer=""</p>
 		</div>
 		
-		<div class="ans"> 
+		<div class="ans">
 		<form method="post">
-			<input type="text" placeholder="Your answer" name="ans5" id="ans5" autocomplete="off"><br><br>
+			<input type="text" placeholder="Your answer" name="ans1" id="ans1" autocomplete="off"><br><br>
 			<input type="submit" name="submit" class="button">
 			<input type="reset" name="reset" class="button-reset">
 			<input type="button" name="Leaderboard" value="Leaderboard" onClick="window.location.href ='Score.php'" class="button-leader">
 		</form>
+
 		</div>
 	</div>
 	<?php
 			include("DBConnection.php");
-
 			session_start();
 			$username = $_SESSION['email']; //retrieve the session variable
 			?>
-			<p id="player">Player: <?php echo $username ?> </p>
+			<p id="player">Player: <?php echo $username ?></p>
 			<?php
-			if(isset($_POST['ans5']))
+			if(isset($_POST['ans1']))
 			{
-				$check=$_POST["ans5"];
-				if ($_POST["ans5"] == 'trojanwar'){
-				$qry = "UPDATE signup SET ans5='$check', score='6' WHERE mail='$username'";
+				$check=$_POST["ans1"];
+				if ($_POST["ans1"] == 'doubleinvertedcommas'){
+				$qry = "UPDATE arcane SET ans1='$check', score='2' WHERE mail='$username'";
 				$res = mysqli_query($db,$qry);
-				header("location: ques6.php");
+				header("location: norton.php");
 				}
 			
 			else
@@ -88,11 +88,8 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 				$er= 'Try Again';
 				echo "<script>alert('$er')</script>";
 				$q = stripslashes('$check');
-
 			}
 			}
-
-
 		?>
 
 </body>

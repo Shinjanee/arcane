@@ -21,7 +21,7 @@
 				<li>There is no restriction on the number of attempts for any level.<br><br>
 				<li>Google search is allowed.<br><br>
 				<li>Look for hints on the page, url or page source.<br><br>
-				<li>Hints will also be provided at our facebook page< fblink>.<br><br>
+				<li>Hints will also be provided at our facebook page <a href="https://www.facebook.com/Arcane-The-Online-Cryptic-Hunt-275186646307480/"> fblink</a>.<br><br>
 				<li>Anyone found practising harmful activities or violating rules would be straight away disqualified.
 			</ol>
 		</div>
